@@ -34,3 +34,22 @@ class TestMultiplyDivideWithValidation:
             divide("10", 2)
 
 # TODO: Students will add TestMultiplyDivide class
+class TestMultiplyDivide:
+    def test_multiply_positive_numbers(self):
+        assert multiply(3, 4) == 12
+
+    def test_multiply_by_zero(self):
+        assert multiply(5, 0) == 0
+
+    def test_multiply_negative_numbers(self):
+        assert multiply(-3, 4) == -12
+
+    def test_divide_positive_numbers(self):
+        assert divide(10, 2) == 5
+
+    def test_divide_negative_numbers(self):
+        assert divide(-10, 2) == -5
+
+    def test_divide_by_zero(self):
+        with pytest.raises(ValueError):
+            divide(10, 0)
